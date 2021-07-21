@@ -149,6 +149,7 @@ namespace DataStructures.LIB.DoublyLinkedList
         {
             if (Head == null) { return false; }
 
+            //Если значение первого элемента совпадает с искомым
             if (Head.Data.Equals(data))
             {
                 RemoveFirst();
@@ -158,6 +159,7 @@ namespace DataStructures.LIB.DoublyLinkedList
 
             var current = Head.Next;
 
+            //Перебирает список и ищет заданное значение
             for (int i = 1; i < Count - 1; i++)
             {
                 if (current.Data.Equals(data))
@@ -173,6 +175,7 @@ namespace DataStructures.LIB.DoublyLinkedList
                 current = current.Next;
             }
 
+            //Если искомый элемент последний в списке
             if (Tail.Data.Equals(data))
             {
                 RemoveLast();

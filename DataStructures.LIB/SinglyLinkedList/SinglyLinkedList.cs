@@ -167,11 +167,8 @@ namespace DataStructures.LIB.SinglyLinkedList
             var current = Head.Next;
             var previous = Head;
 
-            if (current == null)
-                return false;
-
             //Перебирает список и ищет заданное значение
-            while (current.Next != null)
+            for(int i = 1; i < Count - 1; i++)
             {
                 if (current.Data.Equals(data))
                 {
@@ -186,7 +183,7 @@ namespace DataStructures.LIB.SinglyLinkedList
             }
 
             //Если искомый элемент последний в списке
-            if (current.Data.Equals(data))
+            if (Tail.Data.Equals(data))
             {
                 Tail = previous;
                 Tail.Next = null;
