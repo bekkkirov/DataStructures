@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CircularLinkedList\**" />
+    <EmbeddedResource Remove="CircularLinkedList\**" />
+    <None Remove="CircularLinkedList\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DoublyLinkedList\" />
+  </ItemGroup>
+
+</Project>
