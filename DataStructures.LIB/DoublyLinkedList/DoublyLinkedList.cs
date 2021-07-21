@@ -158,10 +158,7 @@ namespace DataStructures.LIB.DoublyLinkedList
 
             var current = Head.Next;
 
-            if (current == null)
-                return false;
-
-            while (current.Next != null)
+            for (int i = 1; i < Count - 1; i++)
             {
                 if (current.Data.Equals(data))
                 {
