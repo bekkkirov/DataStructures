@@ -13,7 +13,7 @@ namespace DataStructures.LIB.ArrayStack
         #region Fields
 
         /// <summary>
-        /// Массив, который хранит элементы стека
+        /// Стек
         /// </summary>
         private T[] _stack;
 

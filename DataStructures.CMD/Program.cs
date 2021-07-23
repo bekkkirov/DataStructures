@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataStructures.LIB.ArrayQueue;
 using DataStructures.LIB.ArrayStack;
 using DataStructures.LIB.DoublyLinkedList;
 using DataStructures.LIB.LinkedStack;
@@ -13,9 +14,7 @@ namespace DataStructures.CMD
     {
         static void Main(string[] args)
         {
-
+           
         }
     }
-
-    
 }
