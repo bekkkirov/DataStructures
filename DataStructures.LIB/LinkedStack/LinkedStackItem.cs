@@ -22,7 +22,7 @@ namespace DataStructures.LIB.LinkedStack
         public T Data
         {
             get => _data;
-            set => _data = value ?? throw new ArgumentNullException(nameof(value), "Value can`t be null");
+            private set => _data = value ?? throw new ArgumentNullException(nameof(value), "Value can`t be null");
         }
 
         /// <summary>
