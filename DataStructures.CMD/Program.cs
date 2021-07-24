@@ -13,7 +13,7 @@ namespace DataStructures.CMD
     {
         static void Main(string[] args)
         {
-           
+
         }
     }
 }

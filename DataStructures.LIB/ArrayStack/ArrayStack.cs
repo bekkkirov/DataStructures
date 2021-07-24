@@ -20,7 +20,9 @@ namespace DataStructures.LIB.ArrayStack
         /// <summary>
         /// Индекс верхнего элемента стека
         /// </summary>
-        private int _current = -1;
+        private int _head = -1;
+
+        private bool _isEmpty => Count == 0;
 
         #endregion
 
@@ -29,7 +31,7 @@ namespace DataStructures.LIB.ArrayStack
         /// <summary>
         /// Количество элементов стека
         /// </summary>
-        public int Count => _current + 1;
+        public int Count => _head + 1;
 
         #endregion
 
@@ -77,14 +79,14 @@ namespace DataStructures.LIB.ArrayStack
         /// <param name="data"></param>
         public void Push(T data)
         {
-            _current++;
+            _head++;
 
-            if (_current == _stack.Length)
+            if (_head == _stack.Length)
             {
                 Array.Resize(ref _stack, _stack.Length == 0 ? 5 : _stack.Length * 2);
             }
 
-            _stack[_current] = data;
+            _stack[_head] = data;
 
         }
 
@@ -94,13 +96,11 @@ namespace DataStructures.LIB.ArrayStack
         /// <returns></returns>
         public T Pop()
         {
-            if (_current == -1)
+            if (_isEmpty)
                 throw new InvalidOperationException("Stack is empty");
 
-            var item = _stack[_current];
-
-            _stack[_current] = default(T);
-            _current--;
+            var item = _stack[_head];
+            MoveHead();
 
             return item;
         }
@@ -112,17 +112,16 @@ namespace DataStructures.LIB.ArrayStack
         /// <returns></returns>
         public bool TryPop(out T result)
         {
-            if (_current >= 0)
+            if (_isEmpty)
             {
-                result = _stack[_current];
-                _stack[_current] = default(T);
-                _current--;
-
-                return true;
+                result = default(T);
+                return false;
             }
 
-            result = default(T);
-            return false;
+            result = _stack[_head];
+            MoveHead();
+
+            return true;
         }
 
         /// <summary>
@@ -131,10 +130,10 @@ namespace DataStructures.LIB.ArrayStack
         /// <returns></returns>
         public T Peek()
         {
-            if (_current == -1)
+            if (_isEmpty)
                 throw new InvalidOperationException("Stack is empty");
 
-            return _stack[_current];
+            return _stack[_head];
         }
 
         /// <summary>
@@ -144,14 +143,14 @@ namespace DataStructures.LIB.ArrayStack
         /// <returns></returns>
         public bool TryPeek(out T result)
         {
-            if (_current >= 0)
+            if (_isEmpty)
             {
-                result = _stack[_current];
-                return true;
+                result = default(T);
+                return false;
             }
 
-            result = default(T);
-            return false;
+            result = _stack[_head];
+            return true;
         }
 
         /// <summary>
@@ -159,15 +158,28 @@ namespace DataStructures.LIB.ArrayStack
         /// </summary>
         public void Clear()
         {
-            _stack = new T[0];
-            _current = -1;
+            _stack = Array.Empty<T>();
+            _head = -1;
+        }
+
+        #endregion
+
+        #region Private methods
+
+        /// <summary>
+        /// Передвигает вершину стека на 1 элемент 
+        /// </summary>
+        private void MoveHead()
+        {
+            _stack[_head] = default(T);
+            _head--;
         }
 
         #endregion
 
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = _current; i >= 0; i--)
+            for (int i = _head; i >= 0; i--)
             {
                 yield return _stack[i];
             }
