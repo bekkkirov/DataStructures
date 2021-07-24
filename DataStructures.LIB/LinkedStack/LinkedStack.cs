@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DataStructures.LIB.SinglyLinkedList;
 
 namespace DataStructures.LIB.LinkedStack
 {
@@ -15,7 +16,7 @@ namespace DataStructures.LIB.LinkedStack
         /// <summary>
         /// Вершина стека
         /// </summary>
-        private LinkedStackItem<T> _head;
+        private SinglyLinkedListItem<T> _head;
 
         #endregion
 
@@ -60,7 +61,7 @@ namespace DataStructures.LIB.LinkedStack
         /// <param name="data"></param>
         public void Push(T data)
         {
-            var item = new LinkedStackItem<T>(data);
+            var item = new SinglyLinkedListItem<T>(data);
 
             if (_head == null)
             {
