@@ -87,9 +87,7 @@ namespace DataStructures.LIB.LinkedStack
                 throw new InvalidOperationException("Stack is empty");
 
             var item = _head;
-
-            _head = _head.Next;
-            Count--;
+            MoveHead();
 
             return item.Data;
         }
@@ -104,10 +102,8 @@ namespace DataStructures.LIB.LinkedStack
             if (Count > 0)
             {
                 result = _head.Data;
+                MoveHead();
 
-                _head = _head.Next;
-
-                Count--;
                 return true;
             }
 
@@ -151,6 +147,16 @@ namespace DataStructures.LIB.LinkedStack
         {
             _head = null;
             Count = 0;
+        }
+
+        #endregion
+
+        #region Private methods
+
+        private void MoveHead()
+        {
+            _head = _head.Next;
+            Count--;
         }
 
         #endregion
