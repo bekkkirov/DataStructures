@@ -153,6 +153,9 @@ namespace DataStructures.LIB.LinkedStack
 
         #region Private methods
 
+        /// <summary>
+        /// Передвигает вершину стека на 1 элемент
+        /// </summary>
         private void MoveHead()
         {
             _head = _head.Next;
