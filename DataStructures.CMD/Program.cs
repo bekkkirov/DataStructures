@@ -4,6 +4,7 @@ using System.Linq;
 using DataStructures.LIB.ArrayQueue;
 using DataStructures.LIB.ArrayStack;
 using DataStructures.LIB.DoublyLinkedList;
+using DataStructures.LIB.LinkedQueue;
 using DataStructures.LIB.LinkedStack;
 using DataStructures.LIB.SinglyLinkedList;
 
