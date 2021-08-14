@@ -11,6 +11,7 @@ using DataStructures.LIB.HashTable;
 using DataStructures.LIB.LinkedQueue;
 using DataStructures.LIB.LinkedStack;
 using DataStructures.LIB.SinglyLinkedList;
+using DataStructures.LIB.Trie;
 
 namespace DataStructures.CMD
 {
@@ -18,7 +19,7 @@ namespace DataStructures.CMD
     {
         static void Main(string[] args)
         {
-           
+            
         }
     }
 }
