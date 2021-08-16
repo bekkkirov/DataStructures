@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using DataStructures.LIB.ArrayQueue;
 using DataStructures.LIB.ArrayStack;
+using DataStructures.LIB.BinaryHeap;
 using DataStructures.LIB.BinarySearchTree;
 using DataStructures.LIB.Deque;
 using DataStructures.LIB.DoublyLinkedList;
@@ -19,7 +20,7 @@ namespace DataStructures.CMD
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
