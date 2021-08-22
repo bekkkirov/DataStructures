@@ -8,6 +8,7 @@ using DataStructures.LIB.BinaryHeap;
 using DataStructures.LIB.BinarySearchTree;
 using DataStructures.LIB.Deque;
 using DataStructures.LIB.DoublyLinkedList;
+using DataStructures.LIB.Graph;
 using DataStructures.LIB.HashTable;
 using DataStructures.LIB.LinkedQueue;
 using DataStructures.LIB.LinkedStack;
