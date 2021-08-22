@@ -351,6 +351,12 @@ namespace DataStructures.LIB.BinarySearchTree
                 return Search(item.Right, data);
         }
 
+        public void Clear()
+        {
+            Root = null;
+            Count = 0;
+        }
+
         #endregion
     }
 }

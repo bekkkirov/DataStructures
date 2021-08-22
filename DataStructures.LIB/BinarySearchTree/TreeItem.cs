@@ -16,21 +16,34 @@ namespace DataStructures.LIB.BinarySearchTree
 
         #region Properties
 
+        /// <summary>
+        /// Значение, которое хранит узел
+        /// </summary>
         public T Data
         {
             get => _data;
 
-            set => _data = value ?? throw new ArgumentNullException(nameof(value), "Value can`t be null");
+            set => _data = value ?? throw new ArgumentNullException(nameof(Data), "Item data can`t be null");
         }
 
+        /// <summary>
+        /// Указатель на левый дочерний узел
+        /// </summary>
         public TreeItem<T> Left { get; set; }
 
+        /// <summary>
+        /// Указатель на правый дочерний узел
+        /// </summary>
         public TreeItem<T> Right { get; set; }
 
         #endregion
 
         #region Constructors
 
+        /// <summary>
+        /// Создает узел бинарного дерева
+        /// </summary>
+        /// <param name="data"></param>
         public TreeItem(T data)
         {
             Data = data;
@@ -38,6 +51,11 @@ namespace DataStructures.LIB.BinarySearchTree
 
         #endregion
 
+        /// <summary>
+        /// Добавляет новый узел
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public bool Add(T data)
         {
             if(data.CompareTo(Data) == 0)

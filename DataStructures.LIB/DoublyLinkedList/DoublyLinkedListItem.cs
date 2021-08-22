@@ -17,12 +17,12 @@ namespace DataStructures.LIB.DoublyLinkedList
         #region Properties
 
         /// <summary>
-        /// Данные, которые хранит элемент
+        /// Значение, которое хранит элемент
         /// </summary>
         public T Data
         {
             get => _data;
-            set => _data = value ?? throw new ArgumentNullException(nameof(value), "Value can`t be null");
+            set => _data = value ?? throw new ArgumentNullException(nameof(Data), "Item data can`t be null");
         }
 
         /// <summary>

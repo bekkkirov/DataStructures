@@ -24,7 +24,7 @@ namespace DataStructures.LIB.Trie
         /// <summary>
         /// Количество слов в дереве
         /// </summary>
-        public int Count { get; set; } = -1;
+        public int Count { get; set; }
 
         #endregion
 
@@ -36,7 +36,6 @@ namespace DataStructures.LIB.Trie
         public Trie()
         {
             _root = new TrieNode<T>('\0', default(T), "");
-            Count++;
         }
 
         #endregion
@@ -81,6 +80,15 @@ namespace DataStructures.LIB.Trie
         public List<string> StartsWith(string prefix)
         {
             return StartsWith(prefix, _root);
+        }
+
+        /// <summary>
+        /// Очищает префиксное дерево
+        /// </summary>
+        public void Clear()
+        {
+            _root = new TrieNode<T>('\0', default(T), ""); ;
+            Count = 0;
         }
 
         #endregion

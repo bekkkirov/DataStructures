@@ -12,9 +12,6 @@ namespace DataStructures.LIB.ArrayQueue
     {
         #region Fields
 
-        /// <summary>
-        /// Очередь
-        /// </summary>
         private T[] _queue;
 
         /// <summary>
@@ -47,7 +44,7 @@ namespace DataStructures.LIB.ArrayQueue
         /// </summary>
         public ArrayQueue()
         {
-            _queue = new T[0];
+            _queue = Array.Empty<T>();
         }
 
         /// <summary>
@@ -124,7 +121,8 @@ namespace DataStructures.LIB.ArrayQueue
         }
 
         /// <summary>
-        /// Возвращает значение, которое показывает есть ли в начале очереди элемент. Если есть копирует его в переменную с параметром out и удаляет его
+        /// Удаляет верхний элемент из начала очереди.
+        /// Если операция удалась записывает его значение в переменную с параметром out и возвращает true.
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
@@ -143,7 +141,7 @@ namespace DataStructures.LIB.ArrayQueue
         }
 
         /// <summary>
-        /// Возвращает значение, которое показывает есть ли в начале очереди элемент. Если есть копирует его в переменную с параметром out
+        /// Если в начале очереди есть элемент, копирует его в переменную с параметром out и возвращает true.
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>

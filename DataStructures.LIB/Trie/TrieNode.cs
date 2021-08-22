@@ -23,12 +23,12 @@ namespace DataStructures.LIB.Trie
         public char Symbol { get; set; }
 
         /// <summary>
-        /// Данные, которые хранит узел
+        /// Значение, которое хранит узел
         /// </summary>
         public T Data
         {
             get => _data;
-            set => _data = value ?? throw new ArgumentNullException(nameof(value), "Value can`t be null");
+            set => _data = value ?? throw new ArgumentNullException(nameof(Data), "Node data can`t be null");
         }
 
         /// <summary>

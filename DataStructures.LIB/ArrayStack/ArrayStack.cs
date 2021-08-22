@@ -12,9 +12,6 @@ namespace DataStructures.LIB.ArrayStack
     {
         #region Fields
 
-        /// <summary>
-        /// Стек
-        /// </summary>
         private T[] _stack;
 
         /// <summary>
@@ -42,7 +39,7 @@ namespace DataStructures.LIB.ArrayStack
         /// </summary>
         public ArrayStack()
         {
-            _stack = new T[0];
+            _stack = Array.Empty<T>();
         }
 
         /// <summary>
@@ -106,7 +103,8 @@ namespace DataStructures.LIB.ArrayStack
         }
 
         /// <summary>
-        /// Возвращает значение, которое показывает есть ли на вершине стека элемент. Если есть копирует его в переменную с параметром out и удаляет его
+        /// Удаляет верхний элемент стека.
+        /// Если операция удалась записывает его значение в переменную с параметром out и возвращает true.
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>
@@ -137,7 +135,7 @@ namespace DataStructures.LIB.ArrayStack
         }
 
         /// <summary>
-        /// Возвращает значение, которое показывает есть ли на вершине стека элемент. Если есть копирует его в переменную с параметром out
+        /// Если на вершине стека есть элемент, записывает его в переменную с параметром out и возвращает true.
         /// </summary>
         /// <param name="result"></param>
         /// <returns></returns>

@@ -52,7 +52,7 @@ namespace DataStructures.LIB.Dictionary
         #region Public methods
 
         /// <summary>
-        /// Возврашает true, если словарь содержит элемент с заданным ключом
+        /// Возвращает true, если словарь содержит элемент с заданным ключом
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>

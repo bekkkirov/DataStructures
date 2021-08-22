@@ -5,6 +5,10 @@ using DataStructures.LIB.DoublyLinkedList;
 
 namespace DataStructures.LIB.Deque
 {
+    /// <summary>
+    /// Дек
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Deque<T> : IEnumerable<T>
     {
         #region Fields
